@@ -1,0 +1,17 @@
+import ui.LoginUI;
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // Set native look and feel
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            new LoginUI().setVisible(true);
+        });
+    }
+}
